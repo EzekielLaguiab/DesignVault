@@ -550,6 +550,7 @@ function showPage(name) {
 
   // Close mobile menu
   document.getElementById('navLinks').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
   return false;
 }
 
@@ -585,7 +586,10 @@ function setupTheme() {
 function setupHamburger() {
   const btn = document.getElementById('hamburger');
   const nav = document.getElementById('navLinks');
-  btn.addEventListener('click', () => nav.classList.toggle('open'));
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    btn.classList.toggle('open');
+  });
 }
 
 // ─── SCROLL NAV ───────────────────────────────

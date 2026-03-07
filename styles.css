@@ -1079,6 +1079,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 @media (max-width: 640px) {
+  /* ── NAVBAR MOBILE ── */
   .nav-links { display: none; }
   .hamburger { display: flex; }
 
@@ -1090,25 +1091,97 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     left: 0; right: 0;
     background: var(--surface);
     border-bottom: 1px solid var(--border);
-    padding: 16px;
-    gap: 4px;
+    padding: 12px 16px 16px;
+    gap: 2px;
     z-index: 99;
     box-shadow: var(--shadow-md);
   }
 
+  .nav-links.open .nav-link {
+    padding: 12px 16px;
+    font-size: 1rem;
+    border-radius: var(--radius-sm);
+    width: 100%;
+    display: block;
+  }
+
+  /* Animate hamburger → X when open */
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* ── HERO ── */
   .hero { padding: 40px 20px 60px; }
   .hero-title { font-size: 2.4rem; }
   .hero-actions { flex-direction: column; align-items: center; }
   .btn { width: 100%; justify-content: center; }
 
+  /* ── CARDS / GRID ── */
   .cards-grid { grid-template-columns: 1fr; }
   .ds-colors { grid-template-columns: repeat(3, 1fr); }
 
+  /* ── TEMPLATE DETAIL — fix zoom issue ── */
+  .detail-hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+  }
+
+  .detail-preview {
+    aspect-ratio: 16/9;
+    border-radius: var(--radius-md);
+  }
+
+  .detail-title {
+    font-size: 1.8rem;
+  }
+
+  #detailContent {
+    padding: 20px 16px 60px;
+    overflow-x: hidden;
+  }
+
+  .detail-back {
+    padding: 16px 16px 0;
+  }
+
+  /* Prevent ds-content sections from overflowing */
+  .ds-content, #detailContent .ds-content {
+    overflow-x: hidden;
+  }
+
+  .ds-components {
+    overflow-x: hidden;
+  }
+
+  /* Navbar demo inside detail — prevent overflow */
+  .ds-navbar-demo {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+
+  .demo-nav-links {
+    gap: 12px;
+  }
+
+  /* ── FOOTER / ABOUT ── */
   .footer-inner { flex-direction: column; text-align: center; }
   .about-aside { flex-direction: column; }
 
-  .ds-section { padding: 24px; }
-  .templates-section { padding: 48px 16px; }
+  .ds-section { padding: 20px 16px; }
+  .templates-section { padding: 40px 16px; }
+
+  /* Spacing boxes — prevent overflow on small screens */
+  .sp-box { max-width: 80px !important; max-height: 40px !important; }
 }
 
 /* HIDDEN CLASS */
