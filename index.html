@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DesignVault — Free Web Templates</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" onclick="showPage('home')">
+        <span class="logo-mark">D</span>
+        <span class="logo-text">DesignVault</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" class="nav-link active" data-page="home" onclick="showPage('home')">Home</a></li>
+        <li><a href="#" class="nav-link" data-page="templates" onclick="showPage('templates')">Templates</a></li>
+        <li><a href="#" class="nav-link" data-page="design-system" onclick="showPage('design-system')">Design System</a></li>
+        <li><a href="#" class="nav-link" data-page="about" onclick="showPage('about')">About</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <span class="theme-icon sun">☀</span>
+          <span class="theme-icon moon">☽</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HOME PAGE -->
+  <div id="page-home" class="page active">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="hero-orb orb1"></div>
+        <div class="hero-orb orb2"></div>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">✦ Free Forever</div>
+        <h1 class="hero-title">
+          Free Web Design<br/>
+          <em>Templates</em>
+        </h1>
+        <p class="hero-desc">
+          Production-ready templates with full design systems — colors, typography, spacing, and components. Built for developers who want to learn and ship faster.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="showPage('templates')">Browse Templates</button>
+          <button class="btn btn-ghost" onclick="showPage('design-system')">Design System →</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">12</span><span class="stat-label">Templates</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="stat-num">3</span><span class="stat-label">Categories</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Free</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="mockup-window">
+          <div class="mockup-bar">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="mockup-url">designvault.io/template</span>
+          </div>
+          <div class="mockup-body">
+            <div class="mock-nav"></div>
+            <div class="mock-hero">
+              <div class="mock-line wide"></div>
+              <div class="mock-line med"></div>
+              <div class="mock-btn-row"><div class="mock-btn"></div><div class="mock-btn ghost"></div></div>
+            </div>
+            <div class="mock-cards">
+              <div class="mock-card"><div class="mock-img"></div><div class="mock-line short"></div><div class="mock-line med"></div></div>
+              <div class="mock-card"><div class="mock-img alt"></div><div class="mock-line short"></div><div class="mock-line med"></div></div>
+              <div class="mock-card"><div class="mock-img"></div><div class="mock-line short"></div><div class="mock-line med"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER + CARDS -->
+    <section class="templates-section" id="homeTemplates">
+      <div class="section-header">
+        <h2 class="section-title">Featured Templates</h2>
+        <p class="section-sub">Click any template to explore the full design system</p>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+        <button class="filter-btn" data-filter="landing">Landing Page</button>
+        <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+      </div>
+      <div class="cards-grid" id="cardsGrid"></div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features-section">
+      <div class="features-inner">
+        <div class="feature-card">
+          <div class="feature-icon">⬡</div>
+          <h3>Full Design Systems</h3>
+          <p>Every template ships with a complete guide: colors, type scale, spacing tokens, and components.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">◈</div>
+          <h3>Copy-Paste Ready</h3>
+          <p>Components are isolated and documented so you can drop them into any project instantly.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⬭</div>
+          <h3>Responsive by Default</h3>
+          <p>Every layout is designed mobile-first and tested across breakpoints from 320px to 1920px.</p>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /page-home -->
+
+  <!-- TEMPLATES PAGE -->
+  <div id="page-templates" class="page">
+    <section class="page-hero">
+      <h1 class="page-title">All Templates</h1>
+      <p class="page-sub">Explore the full collection. Each template is free to use and comes with a complete design system.</p>
+    </section>
+    <section class="templates-section">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+        <button class="filter-btn" data-filter="landing">Landing Page</button>
+        <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+      </div>
+      <div class="cards-grid" id="allCardsGrid"></div>
+    </section>
+  </div>
+
+  <!-- TEMPLATE DETAIL PAGE -->
+  <div id="page-detail" class="page">
+    <div class="detail-back">
+      <button class="btn-back" onclick="goBack()">← Back to Templates</button>
+    </div>
+    <div id="detailContent"></div>
+  </div>
+
+  <!-- DESIGN SYSTEM PAGE -->
+  <div id="page-design-system" class="page">
+    <section class="page-hero">
+      <h1 class="page-title">Design System</h1>
+      <p class="page-sub">The foundational tokens and patterns that power every DesignVault template.</p>
+    </section>
+    <div class="ds-content">
+      <div class="ds-section">
+        <h2 class="ds-heading">Color Palette</h2>
+        <div class="ds-colors">
+          <div class="color-swatch" style="--c:#0F0F0F"><span class="swatch-name">Ink</span><span class="swatch-val">#0F0F0F</span></div>
+          <div class="color-swatch" style="--c:#1A1A2E"><span class="swatch-name">Midnight</span><span class="swatch-val">#1A1A2E</span></div>
+          <div class="color-swatch" style="--c:#4F46E5"><span class="swatch-name">Indigo</span><span class="swatch-val">#4F46E5</span></div>
+          <div class="color-swatch" style="--c:#F59E0B"><span class="swatch-name">Amber</span><span class="swatch-val">#F59E0B</span></div>
+          <div class="color-swatch" style="--c:#10B981"><span class="swatch-name">Emerald</span><span class="swatch-val">#10B981</span></div>
+          <div class="color-swatch" style="--c:#F8F8F8"><span class="swatch-name">Snow</span><span class="swatch-val">#F8F8F8</span></div>
+        </div>
+      </div>
+      <div class="ds-section">
+        <h2 class="ds-heading">Typography</h2>
+        <div class="ds-type">
+          <div class="type-example h1-ex">H1 — Display Heading</div>
+          <div class="type-example h2-ex">H2 — Section Title</div>
+          <div class="type-example h3-ex">H3 — Card Heading</div>
+          <div class="type-example body-ex">Body — DM Sans 16px/1.7. Used for paragraphs, descriptions, and interface copy. Optimized for readability at all sizes.</div>
+          <div class="type-example mono-ex">Mono — DM Mono · code · tokens · values</div>
+        </div>
+      </div>
+      <div class="ds-section">
+        <h2 class="ds-heading">Spacing System (8px base)</h2>
+        <div class="ds-spacing">
+          <div class="sp-row"><div class="sp-box" style="width:8px;height:8px"></div><span>4px — xs</span></div>
+          <div class="sp-row"><div class="sp-box" style="width:16px;height:16px"></div><span>8px — sm</span></div>
+          <div class="sp-row"><div class="sp-box" style="width:24px;height:24px"></div><span>16px — md</span></div>
+          <div class="sp-row"><div class="sp-box" style="width:40px;height:40px"></div><span>24px — lg</span></div>
+          <div class="sp-row"><div class="sp-box" style="width:64px;height:64px"></div><span>48px — xl</span></div>
+          <div class="sp-row"><div class="sp-box" style="width:96px;height:96px"></div><span>80px — 2xl</span></div>
+        </div>
+      </div>
+      <div class="ds-section">
+        <h2 class="ds-heading">Components</h2>
+        <div class="ds-components">
+          <div class="comp-group">
+            <h3>Buttons</h3>
+            <div class="comp-row">
+              <button class="btn btn-primary">Primary</button>
+              <button class="btn btn-secondary">Secondary</button>
+              <button class="btn btn-ghost">Ghost</button>
+              <button class="btn btn-danger">Danger</button>
+            </div>
+          </div>
+          <div class="comp-group">
+            <h3>Form Inputs</h3>
+            <div class="comp-col">
+              <input class="ds-input" type="text" placeholder="Text input" />
+              <input class="ds-input" type="email" placeholder="Email input" />
+              <select class="ds-input"><option>Select option</option><option>Option A</option><option>Option B</option></select>
+            </div>
+          </div>
+          <div class="comp-group">
+            <h3>Cards</h3>
+            <div class="ds-card-demo">
+              <div class="demo-card">
+                <div class="demo-card-img"></div>
+                <div class="demo-card-body">
+                  <h4>Card Title</h4>
+                  <p>Supporting text goes here with a short description.</p>
+                  <button class="btn btn-primary" style="font-size:0.8rem;padding:8px 16px">Action</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="comp-group full">
+            <h3>Navbar</h3>
+            <div class="ds-navbar-demo">
+              <span class="demo-logo">Brand</span>
+              <div class="demo-nav-links">
+                <span class="demo-link active">Home</span>
+                <span class="demo-link">Work</span>
+                <span class="demo-link">About</span>
+              </div>
+              <button class="btn btn-primary" style="font-size:0.8rem;padding:8px 20px">Contact</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT PAGE -->
+  <div id="page-about" class="page">
+    <section class="page-hero">
+      <h1 class="page-title">About DesignVault</h1>
+      <p class="page-sub">A free resource built for developers learning front-end design.</p>
+    </section>
+    <div class="about-content">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>Why DesignVault?</h2>
+          <p>Most template sites give you code without teaching you why. DesignVault flips that — every template ships with a full design system breakdown so you understand the decisions behind the design.</p>
+          <p>We believe great UI comes from understanding design fundamentals: color theory, typography hierarchy, spatial rhythm, and component thinking. These templates are built to teach those principles while giving you production-ready starting points.</p>
+          <h2 style="margin-top:2rem">What's Inside</h2>
+          <ul class="about-list">
+            <li>✦ Color palettes with contrast ratios</li>
+            <li>✦ Type scales with use-case guidance</li>
+            <li>✦ 8px-based spacing systems</li>
+            <li>✦ Reusable component libraries</li>
+            <li>✦ Responsive layout patterns</li>
+          </ul>
+        </div>
+        <div class="about-aside">
+          <div class="about-card">
+            <div class="about-num">12</div>
+            <div class="about-label">Free Templates</div>
+          </div>
+          <div class="about-card">
+            <div class="about-num">∞</div>
+            <div class="about-label">Free Forever</div>
+          </div>
+          <div class="about-card">
+            <div class="about-num">MIT</div>
+            <div class="about-label">Open License</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">D</span>
+        <span class="logo-text">DesignVault</span>
+      </div>
+      <p class="footer-copy">Free web design templates. Built with care. © 2025 DesignVault.</p>
+      <div class="footer-links">
+        <a href="#" onclick="showPage('templates')">Templates</a>
+        <a href="#" onclick="showPage('design-system')">Design System</a>
+        <a href="#" onclick="showPage('about')">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
