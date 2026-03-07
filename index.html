@@ -9,8 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-
-  <!-- NAV -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="#" class="nav-logo" onclick="showPage('home')">
@@ -35,10 +33,8 @@
     </div>
   </nav>
 
-  <!-- HOME PAGE -->
+  <!-- HOME -->
   <div id="page-home" class="page active">
-
-    <!-- HERO -->
     <section class="hero">
       <div class="hero-bg">
         <div class="hero-orb orb1"></div>
@@ -47,21 +43,16 @@
       </div>
       <div class="hero-content">
         <div class="hero-badge">✦ Free Forever</div>
-        <h1 class="hero-title">
-          Free Web Design<br/>
-          <em>Templates</em>
-        </h1>
-        <p class="hero-desc">
-          Production-ready templates with full design systems — colors, typography, spacing, and components. Built for developers who want to learn and ship faster.
-        </p>
+        <h1 class="hero-title">Free Web Design<br/><em>Templates</em></h1>
+        <p class="hero-desc">Production-ready templates with full design systems — colors, typography, spacing, and components. Built for developers who want to learn and ship faster.</p>
         <div class="hero-actions">
           <button class="btn btn-primary" onclick="showPage('templates')">Browse Templates</button>
           <button class="btn btn-ghost" onclick="showPage('design-system')">Design System →</button>
         </div>
         <div class="hero-stats">
-          <div class="stat"><span class="stat-num">12</span><span class="stat-label">Templates</span></div>
+          <div class="stat"><span class="stat-num">24</span><span class="stat-label">Templates</span></div>
           <div class="stat-div"></div>
-          <div class="stat"><span class="stat-num">3</span><span class="stat-label">Categories</span></div>
+          <div class="stat"><span class="stat-num">8</span><span class="stat-label">Categories</span></div>
           <div class="stat-div"></div>
           <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Free</span></div>
         </div>
@@ -88,23 +79,14 @@
         </div>
       </div>
     </section>
-
-    <!-- FILTER + CARDS -->
-    <section class="templates-section" id="homeTemplates">
+    <section class="templates-section">
       <div class="section-header">
-        <h2 class="section-title">Featured Templates</h2>
+        <h2 class="section-title">Browse Templates</h2>
         <p class="section-sub">Click any template to explore the full design system</p>
       </div>
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="portfolio">Portfolio</button>
-        <button class="filter-btn" data-filter="landing">Landing Page</button>
-        <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
-      </div>
+      <div class="filter-bar" id="homeFilterBar"></div>
       <div class="cards-grid" id="cardsGrid"></div>
     </section>
-
-    <!-- FEATURES -->
     <section class="features-section">
       <div class="features-inner">
         <div class="feature-card">
@@ -124,27 +106,21 @@
         </div>
       </div>
     </section>
+  </div>
 
-  </div><!-- /page-home -->
-
-  <!-- TEMPLATES PAGE -->
+  <!-- TEMPLATES -->
   <div id="page-templates" class="page">
     <section class="page-hero">
       <h1 class="page-title">All Templates</h1>
       <p class="page-sub">Explore the full collection. Each template is free to use and comes with a complete design system.</p>
     </section>
-    <section class="templates-section">
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="portfolio">Portfolio</button>
-        <button class="filter-btn" data-filter="landing">Landing Page</button>
-        <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
-      </div>
+    <section class="templates-section" style="padding-top:0">
+      <div class="filter-bar" id="allFilterBar"></div>
       <div class="cards-grid" id="allCardsGrid"></div>
     </section>
   </div>
 
-  <!-- TEMPLATE DETAIL PAGE -->
+  <!-- DETAIL -->
   <div id="page-detail" class="page">
     <div class="detail-back">
       <button class="btn-back" onclick="goBack()">← Back to Templates</button>
@@ -152,13 +128,13 @@
     <div id="detailContent"></div>
   </div>
 
-  <!-- DESIGN SYSTEM PAGE -->
+  <!-- DESIGN SYSTEM -->
   <div id="page-design-system" class="page">
     <section class="page-hero">
       <h1 class="page-title">Design System</h1>
       <p class="page-sub">The foundational tokens and patterns that power every DesignVault template.</p>
     </section>
-    <div class="ds-content">
+    <div class="ds-content" id="dsContent">
       <div class="ds-section">
         <h2 class="ds-heading">Color Palette</h2>
         <div class="ds-colors">
@@ -176,7 +152,7 @@
           <div class="type-example h1-ex">H1 — Display Heading</div>
           <div class="type-example h2-ex">H2 — Section Title</div>
           <div class="type-example h3-ex">H3 — Card Heading</div>
-          <div class="type-example body-ex">Body — DM Sans 16px/1.7. Used for paragraphs, descriptions, and interface copy. Optimized for readability at all sizes.</div>
+          <div class="type-example body-ex">Body — DM Sans 16px/1.7. Used for paragraphs, descriptions, and interface copy.</div>
           <div class="type-example mono-ex">Mono — DM Mono · code · tokens · values</div>
         </div>
       </div>
@@ -212,7 +188,7 @@
             </div>
           </div>
           <div class="comp-group">
-            <h3>Cards</h3>
+            <h3>Card</h3>
             <div class="ds-card-demo">
               <div class="demo-card">
                 <div class="demo-card-img"></div>
@@ -241,7 +217,7 @@
     </div>
   </div>
 
-  <!-- ABOUT PAGE -->
+  <!-- ABOUT -->
   <div id="page-about" class="page">
     <section class="page-hero">
       <h1 class="page-title">About DesignVault</h1>
@@ -252,7 +228,7 @@
         <div class="about-text">
           <h2>Why DesignVault?</h2>
           <p>Most template sites give you code without teaching you why. DesignVault flips that — every template ships with a full design system breakdown so you understand the decisions behind the design.</p>
-          <p>We believe great UI comes from understanding design fundamentals: color theory, typography hierarchy, spatial rhythm, and component thinking. These templates are built to teach those principles while giving you production-ready starting points.</p>
+          <p>We believe great UI comes from understanding design fundamentals: color theory, typography hierarchy, spatial rhythm, and component thinking.</p>
           <h2 style="margin-top:2rem">What's Inside</h2>
           <ul class="about-list">
             <li>✦ Color palettes with contrast ratios</li>
@@ -263,24 +239,15 @@
           </ul>
         </div>
         <div class="about-aside">
-          <div class="about-card">
-            <div class="about-num">12</div>
-            <div class="about-label">Free Templates</div>
-          </div>
-          <div class="about-card">
-            <div class="about-num">∞</div>
-            <div class="about-label">Free Forever</div>
-          </div>
-          <div class="about-card">
-            <div class="about-num">MIT</div>
-            <div class="about-label">Open License</div>
-          </div>
+          <div class="about-card"><div class="about-num">24</div><div class="about-label">Free Templates</div></div>
+          <div class="about-card"><div class="about-num">8</div><div class="about-label">Categories</div></div>
+          <div class="about-card"><div class="about-num">∞</div><div class="about-label">Free Forever</div></div>
+          <div class="about-card"><div class="about-num">MIT</div><div class="about-label">Open License</div></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
