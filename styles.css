@@ -166,7 +166,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .theme-toggle:hover { background: var(--surface-3); transform: rotate(15deg); }
 
 .theme-icon { position: absolute; transition: all 0.3s; }
-.theme-icon.moon { opacity: 0; transform: translateY(20px); }
+.theme-icon.moon { 
+opacity: 0; 
+transform: translateY(20px);
+color: white;
+ }
 [data-theme="dark"] .theme-icon.sun { opacity: 0; transform: translateY(-20px); }
 [data-theme="dark"] .theme-icon.moon { opacity: 1; transform: translateY(0); }
 
